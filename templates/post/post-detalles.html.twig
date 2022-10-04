@@ -5,6 +5,39 @@
 {% block body %}
 {{parent()}}
 
-    {{dump(post)}}
-          
+<section class="section-form">
+        <div class="contenedor">
+            <div class="cabecera">
+                <h2>Los Post</h2>
+            </div>
+            <br>
+    <form action="{{ path('app_post') }}" method="post">
+
+
+    <table border="1px">
+        <thead>
+        <tr style="background-color:grey;">
+
+            <td>id</td>
+            <td>titulo</td>
+            <td>comentario</td>
+            <td>fecha</td>
+
+        </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td style="color:red">{{post.id}}</td> 
+                <td>{{post.titulo}}</td> 
+                <td>{{post.comentario}}</td> 
+                <td>{{ "now"|date("d/m/Y")}}</td> 
+
+
+
+            </tr>
+
+        </tbody>
+    </table>
+
 {% endblock %}
