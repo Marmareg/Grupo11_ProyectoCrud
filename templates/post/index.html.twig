@@ -4,15 +4,28 @@
 
 {% block body %}
      {{parent()}}
-     {{form(form)}} 
+    
      
      {# {{dump(posts)}}  #}
 
 
+<section class="section-form">
+        <div class="contenedor">
+            <div class="cabecera">
+               <h2 style="color: white;"> Publica Aqui</h2>
+            </div>
+            <br>
 
-    <h2 style="color: blue;"> Publica Aqui</h2>
-    <table border="1px" >
-        <thead>
+            {{form(form)}}
+            </div>
+    </section>
+
+    <br>
+    <section class="section-form">
+    <div class="contenedor">
+            <div class="cabecera">
+    <table style="background-color:grey;" border="1px">
+        <thead style="background-color:grey;">
         <tr>
 
             <td>id</td>
@@ -35,5 +48,7 @@
         {% endfor %}
         </tbody>
     </table>
+    </div>
+    </section>
 {% endblock %}
  
