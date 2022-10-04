@@ -6,14 +6,85 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="{{asset('css/style.css')}}">
+           
+
         {% endblock %}
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
+ 
     <body>
+    <header class="header">
+    <nav class="nav">
+      <img src="{{ asset('bbb.jpg') }}" width="70" height="80"alt="Symfony!"/> 
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a href="{{path('app_registro')}}" class="nav-menu-link nav-link">Registro</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="{{path('app_login')}}" class="nav-menu-link nav-link">Login</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="{{path('app_post')}}" class="nav-menu-link nav-link">Mis post</a>
+       
+      </ul>
+      <form class="formulario">
+		<input type="Sarch" class="formulario__input"  placeholder="Search">
+		<button type="submit" class="formulario__btn">Busqueda</button>
+		</form>
+    </nav>
+  </header>
+
+  <section class="section">
+
+
+    <div class="teaser icon-box" style="color:#fff">
+    <div class="icon img-circle" style="background-color: #fff;">
+    <img alt src="http://coffeecreamthemes.com/themes/magicreche/wordpress/wp-content/uploads/2014/03/icon-soother.png">
+    <div class="box" style="background-color: #E75D5D;">
+    <h3>Bebes</h3>
+    <p>Aula para niños/as de 0 a 1 años con un máximo de 8 bebés.</p>
+    <div class="arrow" style="background-color:#E75D5D"></div>
+    </div>
+    </div>
+    </div>
+    <br>
+
+
+    <div class="teaser icon-box" style="color:#fff">
+    <div class="icon img-circle" style="background-color:#fff;">
+    <img alt="" src="http://coffeecreamthemes.com/themes/magicreche/wordpress/wp-content/uploads/2014/03/icon-bear.png"></div>
+    <div class="box" style="background-color:#F1A733">
+    <h3>1-2 años</h3>
+    <p>Una clase para niños de 1 a 2 años con un máximo de 14 niño/as.</p>
+    <div class="arrow" style="background-color:#F1A733"></div>
+    </div>
+    </div>
+    </div>
+<br>
+
+    <div class="teaser icon-box" style="color:#fff">
+    <div class="icon img-circle" style="background-color:#fff;">
+    <img alt="" src="http://coffeecreamthemes.com/themes/magicreche/wordpress/wp-content/uploads/2014/03/icon-horse.png"></div>
+    <div class="box" style="background-color:#5EB28F">
+    <h3>2-3 años</h3>
+    <p>Una tercer aula para niños de 2 a 3 años con un máximo de 20 niños/as según ratio de la Comunidad de Madrid.</p>
+    <div class="arrow" style="background-color:#5EB28F">
+    </div>
+    </div>
+    </div>
+    </div>
+<br>
+</section>
+   <br>
+   <br>
         {% block body %}{% endblock %}
+
     </body>
 </html>

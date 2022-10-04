@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RegistroController!{% endblock %}
+{% block title %}Hello RegistroController roxi!{% endblock %}
 
 {% block body %}
+{{parent()}}
 
     {% for message in app.flashes('exito') %}
             <div class="alert alert-success">
@@ -11,7 +12,18 @@
         {% endfor %}
 
 
- {{form(formulario)}}
+    <section class="section-form">
+        <div class="contenedor">
+            <div class="cabecera">
+                <h2>Registrate</h2>
+            </div>
+            <br>
+    <form action="{{form(formulario)}}">
+     </form>
+    </section>
+<br>
+<br>
+<br>
  
 {% endblock %}
 
